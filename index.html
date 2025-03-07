@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Word! 😈</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+        <h1 id="titulo">GUESS THE WORD!</h1>
+        
+
+        <div id="tela_inicial">
+            <h3 id="mensagem">Insira uma dica e uma palavra:</h3>
+            <input id="input_dica" type="text" placeholder="Dica"></input>
+            <input id="input_palavra" type="text" placeholder="Palavra"></input>
+            <button onclick="salvarPalavra()">Salvar</button>
+        </div>
+
+        <div id="tela_principal">
+            <h4>Dica: <span id="dica_recebida"></span></h3>
+            <h1 id="palavra_secreta"></h1>
+            <p>Chances restantes: <span id="chances_restantes"></span></p>
+
+            <div>
+                <input id="inputBar" type="text" placeholder="Insira uma letra" maxlength="1"></input>
+                <button onclick="testarLetra()">ADIVINHAR</button>
+            </div>
+
+            <div id="resultados">
+                <div id="acertou">
+                    <p style="color: rgb(2, 134, 24);">Você acertou!</p>
+                    <img src="img/acertou.png" alt="">
+                </div>
+                
+                <div id="ganhou">
+                    <p style="color: rgb(3, 241, 43); -webkit-text-stroke: 0.05rem;">Você ganhou!</p>
+                    <img src="img/ganhou.jpg" alt="">
+                </div>
+
+                <div id="errou">
+                    <p style="color: rgb(194, 2, 2);">Você errou!</p>
+                    <img src="img/errou.jpg" alt="">
+                </div>
+
+                <div id="perdeu">
+                    <p style="color: rgb(253, 1, 1); -webkit-text-stroke: 0.05rem;">Você perdeu!</p>
+                    <img src="img/perdeu.jpg" alt="">
+                </div>
+            </div>
+
+            <button id="reiniciar_button" onclick="reiniciarJogo()">REINICIAR</button>
+        </div> 
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
