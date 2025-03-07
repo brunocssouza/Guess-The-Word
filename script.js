@@ -112,5 +112,7 @@ function mostrarResultado(resultadoRecebido) {
 function reiniciarJogo() {
     document.getElementById('tela_inicial').style.display = 'inline'
     document.getElementById('tela_principal').style.display = 'none'
+    document.getElementById('input_palavra').value = ''
+    document.getElementById('input_dica').value = ''
 }
 
