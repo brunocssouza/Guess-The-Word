@@ -1,7 +1,7 @@
 
 let palavra_sorteada;
 let palavra_sorteada_codificada;
-
+let letras_usadas = [];
 let dica;
 
 function salvarPalavra() {
@@ -61,8 +61,14 @@ function testarLetra() {
 
     let inputRecebido = document.getElementById('inputBar').value.toUpperCase().trim() // value: atributo para se obter dados de um input.
 
+    if (letras_usadas.includes(inputRecebido)) {
+        console.warn('Letra já usada')
+        return
+    }
+    
     // Verifica se a letra recebida faz parte da palavra secreta
-    if (palavra_sorteada.includes(inputRecebido) && !palavra_sorteada_codificada.includes(inputRecebido)) {
+    else if (palavra_sorteada.includes(inputRecebido) && !palavra_sorteada_codificada.includes(inputRecebido)) {
+        letras_usadas.push(input_recebido)
         mostrarResultado('acertou')
 
         // Substitui todos os underscores que guardam a letra que o usuario enviou
@@ -81,7 +87,7 @@ function testarLetra() {
         }
         
     } else {
-
+        letras_usadas.push(input_recebido)
         mostrarResultado('errou')
         document.getElementById('chances_restantes').innerHTML--
 
@@ -114,5 +120,6 @@ function reiniciarJogo() {
     document.getElementById('tela_principal').style.display = 'none'
     document.getElementById('input_palavra').value = ''
     document.getElementById('input_dica').value = ''
+    letras_usadas = []
 }
 
