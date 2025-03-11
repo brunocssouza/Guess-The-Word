@@ -68,7 +68,7 @@ function testarLetra() {
     
     // Verifica se a letra recebida faz parte da palavra secreta
     else if (palavra_sorteada.includes(inputRecebido) && !palavra_sorteada_codificada.includes(inputRecebido)) {
-        letras_usadas.push(input_letra)
+        letras_usadas.push(inputRecebido)
         mostrarResultado('acertou')
 
         // Substitui todos os underscores que guardam a letra que o usuario enviou
