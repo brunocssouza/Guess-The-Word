@@ -62,7 +62,7 @@ function testarLetra() {
     let inputRecebido = document.getElementById('input_letra').value.toUpperCase().trim() // value: atributo para se obter dados de um input.
 
     if (letras_usadas.includes(inputRecebido)) {
-        console.warn('Letra já usada')
+        alert('Letra já usada')
         return
     }
     
