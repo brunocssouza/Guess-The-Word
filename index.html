@@ -24,8 +24,13 @@
             <p>Chances restantes: <span id="chances_restantes"></span></p>
 
             <div>
-                <input id="input_letra" type="text" placeholder="Insira uma letra" maxlength="1"></input>
-                <button onclick="testarLetra()">ADIVINHAR</button>
+                <input id="input_chutarLetra" type="text" placeholder="Insira uma letra" maxlength="1"></input>
+                <button onclick="testarLetra()">ADIVINHAR LETRA</button>
+            </div>
+            
+            <div>
+                <input id="input_chutarPalavra" type="text" placeholder="Insira seu chute (Chance única!)"></input>
+                <button onclick="testarPalavra(document.getElementById('input_chutarPalavra').value)">TUDO OU NADA</button>
             </div>
 
             <div id="resultados">
