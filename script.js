@@ -59,7 +59,7 @@ function testarLetra() {
         return
     }
 
-    let inputRecebido = document.getElementById('inputBar').value.toUpperCase().trim() // value: atributo para se obter dados de um input.
+    let inputRecebido = document.getElementById('input_letra').value.toUpperCase().trim() // value: atributo para se obter dados de um input.
 
     if (letras_usadas.includes(inputRecebido)) {
         console.warn('Letra já usada')
@@ -68,7 +68,7 @@ function testarLetra() {
     
     // Verifica se a letra recebida faz parte da palavra secreta
     else if (palavra_sorteada.includes(inputRecebido) && !palavra_sorteada_codificada.includes(inputRecebido)) {
-        letras_usadas.push(inputBar)
+        letras_usadas.push(input_letra)
         mostrarResultado('acertou')
 
         // Substitui todos os underscores que guardam a letra que o usuario enviou
@@ -87,7 +87,7 @@ function testarLetra() {
         }
         
     } else {
-        letras_usadas.push(inputBar)
+        letras_usadas.push(input_letra)
         mostrarResultado('errou')
         document.getElementById('chances_restantes').innerHTML--
 
@@ -97,7 +97,7 @@ function testarLetra() {
         }
     }
 
-    inputRecebido = document.getElementById('inputBar').value = ''
+    inputRecebido = document.getElementById('input_letra').value = ''
     
 }
 
